@@ -1,0 +1,243 @@
+@import '../bower_components/sass-bootstrap/lib/bootstrap';
+
+html,body {
+    margin:0;
+    padding:0;
+    height:100%;
+    overflow: hidden;
+}
+
+#webpace-body {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    overflow: hidden;
+}
+
+.webpace-border-image {
+    z-index: 99999999;
+    background-image: url('http://phandroid.s3.amazonaws.com/wp-content/uploads/2015/03/wood-wallpaper-4.jpg');
+}
+
+$border-rem: 4rem;
+$border-dbl-rem: 8rem;
+$border-shadow-color: white;
+$border-color: white;
+
+@mixin webpace-horizontal-border-height() {
+    width: -moz-calc(100% - 8rem);
+    width: -webkit-calc(100% - 8rem);
+    width: calc(100% - 8rem);
+    width: -o-calc(100% - 8rem);
+}
+
+@mixin webpace-vertical-border-height() {
+    height: -moz-calc(100% - 8rem);
+    height: -webkit-calc(100% - 8rem);
+    height: calc(100% - 8rem);
+    height: -o-calc(100% - 8rem);
+}
+
+#webpace-passepartout {
+    margin-left: 4rem;
+    margin-top: 4rem;
+    position:fixed;
+    background-color: black;
+    @include webpace-horizontal-border-height();
+    @include webpace-vertical-border-height();
+}
+
+#webpace-egg-region {
+	text-align: center;
+	margin-left: 4rem;
+	margin-top: 4rem;
+	position:fixed;
+	background-color: transparent;
+	z-index: 99999;
+	@include webpace-horizontal-border-height();
+	@include webpace-vertical-border-height();
+}
+
+#webpace-creation {
+    position: absolute;
+}
+
+#webpace-black-white {
+	display:none;
+}
+
+#webpace-black {
+	width: 50%;
+	height: 100%;
+	background-color: black;
+}
+
+#webpace-white {
+	width: 50%;
+	height: 100%;
+	background-color: white;
+}
+
+.webpace-egg {
+	opacity: 0.2;
+	background:red;
+	z-index: 999999;
+	-webkit-box-shadow:  0px 0px 10px 5px rgba(0,0,0,0.16);
+	-moz-box-shadow:  0px 0px 10px 5px rgba(0,0,0,0.16);
+	box-shadow: 0px 0px 10px 5px ghostwhite;
+}
+
+.webpace-pedro-egg {
+	opacity: 0.4;
+	z-index: 999999;
+	display: none;
+	-webkit-box-shadow:  0px 0px 10px 5px rgba(0,0,0,0.16);
+	-moz-box-shadow:  0px 0px 10px 5px rgba(0,0,0,0.16);
+	box-shadow: 0px 0px 10px 5px ghostwhite;
+	left: $border-rem;
+	bottom: $border-rem;
+	position:absolute;
+}
+
+.webpace-horizontal-border {
+    margin-left: $border-rem;
+    position: fixed;
+    height: $border-rem;
+}
+
+#webpace-top-border {
+	-webkit-box-shadow: 0 0px 100px -3px $border-shadow-color;
+	-moz-box-shadow: 0 0px 100px -3px $border-shadow-color;
+	box-shadow: 0 0px 100px -3px $border-shadow-color;
+    border-bottom: 1px solid $border-color;
+    @include webpace-horizontal-border-height();
+}
+
+#webpace-bottom-border {
+    bottom: 0px;
+	-webkit-box-shadow: 0 0px 100px -3px $border-shadow-color;
+	-moz-box-shadow: 0 0px 100px -3px $border-shadow-color;
+	box-shadow: 0 0px 100px -3px $border-shadow-color;
+    border-top: 1px solid $border-color;
+    @include webpace-horizontal-border-height();
+}
+
+#webpace-top-left-border {
+    position: fixed;
+    width: $border-rem;
+    height: $border-rem;
+}
+
+#webpace-top-right-border {
+    position: fixed;
+    right: 0px;
+    width: $border-rem;
+    height: $border-rem;
+}
+
+#webpace-bottom-left-border {
+    position: fixed;
+    bottom: 0px;
+    width: $border-rem;
+    height: $border-rem;
+}
+
+#webpace-bottom-right-border {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    width: $border-rem;
+    height: $border-rem;
+}
+
+.webpace-vertical-border {
+    position: fixed;
+    margin-top: $border-rem;
+    margin-bottom: $border-rem;
+    width: $border-rem;
+}
+
+#webpace-left-border {
+	-webkit-box-shadow: 0 0px 100px -3px $border-shadow-color;
+	-moz-box-shadow: 0 0px 100px -3px $border-shadow-color;
+	box-shadow: 0 0px 100px -3px $border-shadow-color;
+    border-right: 1px solid $border-color;
+    @include webpace-vertical-border-height();
+}
+
+#webpace-right-border {
+    right: 0px;
+	-webkit-box-shadow: 0 0px 100px -8px $border-shadow-color;
+	-moz-box-shadow: 0 0px 100px -8px $border-shadow-color;
+	box-shadow: 0 0px 100px -8px $border-shadow-color;
+    border-left: 1px solid $border-color;
+    @include webpace-vertical-border-height();
+}
+
+@mixin transform-translate-50-percent() {
+	-ms-transform: translate(-50%, -50%); /* IE 9 */
+	-webkit-transform: translate(-50%, -50%); /* Safari */
+	-moz-transform: translate(-50%, -50%);
+	-o-transform:  translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+//ref
+
+.text-shadow-l-white {
+	color: black !important;
+	text-shadow: 2px 1px white;
+}
+
+@mixin text-style-home($c, $fz, $t, $l) {
+	white-space: nowrap;
+	font-family: Impact;
+	font-size: $fz;
+	position:absolute;
+	z-index: 99999999;
+	color: $c;
+	top: $t;
+	left: $l;
+}
+
+#webpace-artist-name {
+    font-weight: bolder;
+	@include text-style-home(white, 90rem, 30%, 50%);
+	@include transform-translate-50-percent();
+}
+
+#webpace-artist-undertitle {
+    display:none;
+	@include text-style-home(white, 50rem, 40%, 50%);
+	@include transform-translate-50-percent();
+}
+
+#webpace-artist-info {
+    display: none;
+    font-size: 1.5rem;
+    font-style: italic;
+	right: $border-rem * 2;
+	bottom: $border-rem * 2;
+	@include text-style-home(gainsboro, 1.5rem, none, none);
+	&.downer {
+		right: $border-rem + 0.1;
+		bottom: $border-rem + 0.1;
+	}
+ }
+
+.c-p {
+	cursor: pointer;
+}
+.m--l-s {
+	margin-left: 10px;
+}
+.m-l {
+	margin-left: 15px;
+}
+.m-r-s {
+	margin-right: 10px;
+}
+.m-r {
+	margin-right: 15px;
+}

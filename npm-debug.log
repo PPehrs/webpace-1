@@ -1,0 +1,91 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'sass-bootstrap' ]
+2 info using npm@2.5.1
+3 info using node@v0.12.0
+4 verbose node symlink C:\Program Files\nodejs\\node.exe
+5 warn package.json webpace-1@0.0.1 No description
+6 warn package.json webpace-1@0.0.1 No repository field.
+7 warn package.json webpace-1@0.0.1 No README data
+8 warn package.json grunt-contrib-connect@0.3.0 No README data
+9 warn package.json grunt-contrib-htmlmin@0.1.3 No README data
+10 warn package.json grunt-contrib-imagemin@0.1.4 No README data
+11 warn package.json grunt-contrib-livereload@0.1.2 No README data
+12 silly cache add args [ 'sass-bootstrap', null ]
+13 verbose cache add spec sass-bootstrap
+14 silly cache add parsed spec { raw: 'sass-bootstrap',
+14 silly cache add   scope: null,
+14 silly cache add   name: 'sass-bootstrap',
+14 silly cache add   rawSpec: '',
+14 silly cache add   spec: '*',
+14 silly cache add   type: 'range' }
+15 verbose addNamed sass-bootstrap@*
+16 silly addNamed semver.valid null
+17 silly addNamed semver.validRange *
+18 silly addNameRange { name: 'sass-bootstrap', range: '*', hasData: false }
+19 silly mapToRegistry name sass-bootstrap
+20 silly mapToRegistry using default registry
+21 silly mapToRegistry registry https://registry.npmjs.org/
+22 silly mapToRegistry uri https://registry.npmjs.org/sass-bootstrap
+23 verbose addNameRange registry:https://registry.npmjs.org/sass-bootstrap not in flight; fetching
+24 verbose request uri https://registry.npmjs.org/sass-bootstrap
+25 verbose request no auth needed
+26 info attempt registry request try #1 at 14:38:31
+27 verbose request id 87bb5844fd24bf77
+28 http request GET https://registry.npmjs.org/sass-bootstrap
+29 http 404 https://registry.npmjs.org/sass-bootstrap
+30 verbose headers { 'content-type': 'application/json',
+30 verbose headers   'cache-control': 'max-age=0',
+30 verbose headers   'content-length': '2',
+30 verbose headers   'accept-ranges': 'bytes',
+30 verbose headers   date: 'Thu, 03 Sep 2015 12:38:31 GMT',
+30 verbose headers   via: '1.1 varnish',
+30 verbose headers   age: '0',
+30 verbose headers   connection: 'keep-alive',
+30 verbose headers   'x-served-by': 'cache-fra1248-FRA',
+30 verbose headers   'x-cache': 'MISS',
+30 verbose headers   'x-cache-hits': '0',
+30 verbose headers   'x-timer': 'S1441283911.163790,VS0,VE189' }
+31 silly get cb [ 404,
+31 silly get   { 'content-type': 'application/json',
+31 silly get     'cache-control': 'max-age=0',
+31 silly get     'content-length': '2',
+31 silly get     'accept-ranges': 'bytes',
+31 silly get     date: 'Thu, 03 Sep 2015 12:38:31 GMT',
+31 silly get     via: '1.1 varnish',
+31 silly get     age: '0',
+31 silly get     connection: 'keep-alive',
+31 silly get     'x-served-by': 'cache-fra1248-FRA',
+31 silly get     'x-cache': 'MISS',
+31 silly get     'x-cache-hits': '0',
+31 silly get     'x-timer': 'S1441283911.163790,VS0,VE189' } ]
+32 verbose stack Error: Registry returned 404 for GET on https://registry.npmjs.org/sass-bootstrap
+32 verbose stack     at CachingRegistryClient.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:244:14)
+32 verbose stack     at Request._callback (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:178:14)
+32 verbose stack     at Request.self.callback (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:344:22)
+32 verbose stack     at Request.emit (events.js:110:17)
+32 verbose stack     at Request.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:1239:14)
+32 verbose stack     at Request.emit (events.js:129:20)
+32 verbose stack     at IncomingMessage.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:1187:12)
+32 verbose stack     at IncomingMessage.emit (events.js:129:20)
+32 verbose stack     at _stream_readable.js:908:16
+32 verbose stack     at process._tickCallback (node.js:355:11)
+33 verbose statusCode 404
+34 verbose pkgid sass-bootstrap
+35 verbose cwd D:\Work\webpace-1
+36 error Windows_NT 6.1.7601
+37 error argv "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "sass-bootstrap"
+38 error node v0.12.0
+39 error npm  v2.5.1
+40 error code E404
+41 error 404 Registry returned 404 for GET on https://registry.npmjs.org/sass-bootstrap
+41 error 404
+41 error 404 'sass-bootstrap' is not in the npm registry.
+41 error 404 You should bug the author to publish it (or use the name yourself!)
+41 error 404 It was specified as a dependency of 'webpace-1'
+41 error 404
+41 error 404 Note that you can also install from a
+41 error 404 tarball, folder, http url, or git url.
+42 verbose exit [ 1, true ]
